@@ -8,7 +8,7 @@ $('#FBalbum').fbAlbum({
 
 ### The Default Settings:
 
-``` JSON
+``` javascript
 {
   'albumID' : '10150302289698306',
   'limit' : 100, // limit on number of linked photos in album
