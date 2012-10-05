@@ -1,3 +1,5 @@
+_*note: this code does not work for personal “profile” page albums – only public fan-pages, business pages, etc..._
+
 ### Basic Usage:
 
 ``` javascript
