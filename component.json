@@ -2,7 +2,7 @@
   "name": "fbAlbum",
   "version": "1.1.1",
   "description": "So, one day, I tried to find a simple solution to use images from a facebook photo album for a website I was working on. I couldn’t find anything that was free wasn’t dependent on a CMS like WordPress or Joomla. I couldn’t find it, so I made it.",
-  "homepage": "https://github.com/zachlysobey/fbalbum",
+  "homepage": "https://github.com/zachlysobey/FBalbum",
   "main": [
     "./jquery.fbAlbum.1.1.1.js"
   ],
