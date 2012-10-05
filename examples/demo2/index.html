@@ -1,0 +1,49 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>FBAlbum + Fancybox Demo</title>
+
+	<!-- WHERE THE MAGIC HAPPENS-->	
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="jquery.fbAlbum.js"></script>
+	<script src="fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+	<script src="fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+	<script>
+		$(document).ready(function() {
+			$('#MY_DIV_ID').fbAlbum({
+				'albumID':'201652143221992'
+			});
+			$('#ANOTHER_ID').fbAlbum({
+				'albumID':'203416696378870'
+			});
+		});
+	</script>
+	
+	<!-- END OF THE MAGIC-->
+	
+<style>
+/* just a few simple styles on the album */
+body{ max-width:600px; text-align:center;}
+.album{ list-style:none;}
+.album li{ float:left; height:150px; margin-bottom:10px; text-align:center;}
+.album a{ display:block; width:150px; padding:5px; margin:5px; border:4px solid #444;}
+.album a:hover{ border:4px solid #44d}
+h2{clear:both}
+</style>
+</head>
+<body>
+
+	<h1><a href="http://zach.lysobey.com/projects/fbalbum">FBAlbum</a> Multiple Album Demo</h1>
+    <p>
+        The Demo Albums:</a><br />
+        <a href="https://www.facebook.com/media/set/?set=a.201652143221992.55520.186646504722556&type=3">[Album ID: 20165214322199]</a><br />
+        <a href="https://www.facebook.com/media/set/?set=a.203416696378870.55796.186646504722556&type=3">[Album ID: 203416696378870]</a><br />
+    </p>
+	<p><a href="http://zach.lysobey.com/files/demo2/demo2.zip">Download The Files</a> (.zip of everything nescessary for this demo) or just view the source</p>
+	
+    <h2>Album #1</h2>
+	<div id="MY_DIV_ID"></div>
+    <h2>Album #2</h2>
+	<div id="ANOTHER_ID"></div>
+
+</body>
+</html>
