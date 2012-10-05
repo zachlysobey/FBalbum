@@ -23,3 +23,9 @@ $('#FBalbum').fbAlbum({
   'fullSize' : 0 // use sizes 1 - 9 to change from default size
 };
 ```
+
+### Installing via Bower:
+
+``` bash
+$ bower install fbAlbum
+```
