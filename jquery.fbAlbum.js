@@ -1,12 +1,10 @@
-
-/*  
-    1.1.1   - fixed title escaping bug
-    1.1     - added options {limitThumbs, thumbSize, fullSize}
-    1.02    - moved 'title' attribute from <img> to <a> 
-            - added alt attribute to <img> 
-    1.01    - added 'rel' option for <a> tags 
-*/
-
+/*!
+ * jQuery fbAlbum
+ * https://github.com/zachlysobey/FBalbum
+ *
+ * Author: Zach Lysobey
+ * Version: 1.1.2
+ */
 (function($) {
     'use strict';
     $.fn.fbAlbum = function(options) {
