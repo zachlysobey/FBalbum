@@ -13,8 +13,7 @@
                 'title' : true,
                 'thumbSize' : 0,
                 'fullSize' : 0,
-                'caption' : false,
-                'callback' : function () {}
+                'caption' : false
             };
         if (options) {
             $.extend(settings, options);
@@ -23,11 +22,24 @@
         $.getJSON(graph, function (json) {
             var albumItem = [],
                 currentIndex = 0,
-                $ul = $('<ul>');
+                $ul = $('<ul>').addClass(settings.ulClass);
             $.each(json.data, function () {
                 if (typeof this.picture !== "undefined") {
-                    var thumbImg = settings.thumbSize === 0 ? this.picture : this.images[9 - settings.thumbSize].source,
-                        fullImg = settings.fullSize === 0 ? this.source : this.images[9 - settings.fullSize].source,
+                    console.log(this.images);
+                    var getThumbnail = function(context) {
+                        var n = 9, thumb = context.images[n - settings.thumbSize];
+                        if (settings.thumbSize === 0) {
+                            return context.picture;
+                        }
+                        while(!thumb) {
+                            console.log(thumb);
+                            n--;
+                            thumb = context.images[n - settings.thumbSize];
+                        }
+                        return thumb.source;
+                    };
+                    var thumbImg = getThumbnail(this),
+                        fullImg = settings.fullSize === 0 ? this.source : this.images[8 - settings.fullSize].source,
                         title = (settings.title && this.name) ? this.name : '',
                         $noThumb = (settings.limitThumbs && (currentIndex += 1) >= settings.limitThumbs),
                         $img = $noThumb ? null : $('<img>').attr({
@@ -41,14 +53,14 @@
                             'title': title,
                             'href': fullImg
                         }),
-                        $li = $('<li>').attr({
-                            'class': $noThumb ? 'noThumb' : 'fbThumb'
-                        });
-                    $ul.append($li.append($a.append($img, $caption))).addClass(settings.ulClass);
+                        $li = $('<li>').addClass($noThumb ? 'noThumb' : 'fbThumb');
+                    $ul.append($li.append($a.append($img, $caption)));
                 }
             });
             $targetElement.append($ul);
-            settings.callback();
+            if (settings.callback) {
+                settings.callback();
+            }
         });
         return $targetElement;
     };
