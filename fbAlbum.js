@@ -1,4 +1,4 @@
-// fbalbumJS2.js by zach@lysobey.com
+// fbAlbum.js v2.1 -- zach@lysobey.com
 (function ($) {
     $.fn.fbAlbum = function (options) {
         var $targetElement = this,
