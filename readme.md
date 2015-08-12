@@ -1,5 +1,12 @@
 #FBalbum
 
+### I'm sad to say it looks like Facebook changed their API, effectively breaking any use of this plugin ever. It seems like they now require some sort of authentication token.
+
+http://stackoverflow.com/questions/28907399/facebook-graph-api-not-working-anymore-no-changes-made
+
+
+-----------
+
 ##Why I made this plugin
 
 One day, I tried to find a simple solution to use images from a facebook photo album for a website I was working on.  I couldn’t find anything that was free wasn’t dependent on a CMS like WordPress or Joomla.  I couldn’t find it, so I made it. I posted my code to the forums I was searching on where other people like myself were looking for a solution, and it caught on! Now its apparently being used across the world. Very exciting.
